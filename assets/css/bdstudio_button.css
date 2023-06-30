@@ -1,365 +1,378 @@
-@font-face { 
-  font-family:"lil-gui";
-  src:url("data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUsAAsAAAAACJwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAAH4AAADAImwmYE9TLzIAAAGIAAAAPwAAAGBKqH5SY21hcAAAAcgAAAD0AAACrukyyJBnbHlmAAACvAAAAF8AAACEIZpWH2hlYWQAAAMcAAAAJwAAADZfcj2zaGhlYQAAA0QAAAAYAAAAJAC5AHhobXR4AAADXAAAABAAAABMAZAAAGxvY2EAAANsAAAAFAAAACgCEgIybWF4cAAAA4AAAAAeAAAAIAEfABJuYW1lAAADoAAAASIAAAIK9SUU/XBvc3QAAATEAAAAZgAAAJCTcMc2eJxVjbEOgjAURU+hFRBK1dGRL+ALnAiToyMLEzFpnPz/eAshwSa97517c/MwwJmeB9kwPl+0cf5+uGPZXsqPu4nvZabcSZldZ6kfyWnomFY/eScKqZNWupKJO6kXN3K9uCVoL7iInPr1X5baXs3tjuMqCtzEuagm/AAlzQgPAAB4nGNgYRBlnMDAysDAYM/gBiT5oLQBAwuDJAMDEwMrMwNWEJDmmsJwgCFeXZghBcjlZMgFCzOiKOIFAB71Bb8AeJy1kjFuwkAQRZ+DwRAwBtNQRUGKQ8OdKCAWUhAgKLhIuAsVSpWz5Bbkj3dEgYiUIszqWdpZe+Z7/wB1oCYmIoboiwiLT2WjKl/jscrHfGg/pKdMkyklC5Zs2LEfHYpjcRoPzme9MWWmk3dWbK9ObkWkikOetJ554fWyoEsmdSlt+uR0pCJR34b6t/TVg1SY3sYvdf8vuiKrpyaDXDISiegp17p7579Gp3p++y7HPAiY9pmTibljrr85qSidtlg4+l25GLCaS8e6rRxNBmsnERunKbaOObRz7N72ju5vdAjYpBXHgJylOAVsMseDAPEP8LYoUHicY2BiAAEfhiAGJgZWBgZ7RnFRdnVJELCQlBSRlATJMoLV2DK4glSYs6ubq5vbKrJLSbGrgEmovDuDJVhe3VzcXFwNLCOILB/C4IuQ1xTn5FPilBTj5FPmBAB4WwoqAHicY2BkYGAA4sk1sR/j+W2+MnAzpDBgAyEMQUCSg4EJxAEAwUgFHgB4nGNgZGBgSGFggJMhDIwMqEAYAByHATJ4nGNgAIIUNEwmAABl3AGReJxjYAACIQYlBiMGJ3wQAEcQBEV4nGNgZGBgEGZgY2BiAAEQyQWEDAz/wXwGAAsPATIAAHicXdBNSsNAHAXwl35iA0UQXYnMShfS9GPZA7T7LgIu03SSpkwzYTIt1BN4Ak/gKTyAeCxfw39jZkjymzcvAwmAW/wgwHUEGDb36+jQQ3GXGot79L24jxCP4gHzF/EIr4jEIe7wxhOC3g2TMYy4Q7+Lu/SHuEd/ivt4wJd4wPxbPEKMX3GI5+DJFGaSn4qNzk8mcbKSR6xdXdhSzaOZJGtdapd4vVPbi6rP+cL7TGXOHtXKll4bY1Xl7EGnPtp7Xy2n00zyKLVHfkHBa4IcJ2oD3cgggWvt/V/FbDrUlEUJhTn/0azVWbNTNr0Ens8de1tceK9xZmfB1CPjOmPH4kitmvOubcNpmVTN3oFJyjzCvnmrwhJTzqzVj9jiSX911FjeAAB4nG3HMRKCMBBA0f0giiKi4DU8k0V2GWbIZDOh4PoWWvq6J5V8If9NVNQcaDhyouXMhY4rPTcG7jwYmXhKq8Wz+p762aNaeYXom2n3m2dLTVgsrCgFJ7OTmIkYbwIbC6vIB7WmFfAAAA==") format("woff");
-} 
-@font-face { 
-  font-display:block;
-  font-family:bootstrap-icons;
-  src:url(/assets/fonts/bootstrap-icons-cfe45b98.woff2-1fa40e8900654d2863d011707b9fb6f2) format("woff2"),url(/assets/fonts/bootstrap-icons-999550fa.woff-1fa40e8900654d2863d011707b9fb6f2) format("woff");
-} 
-.lil-gui { 
-/* CSS Variables that may have been missed get put on body */ 
-    --background-color:  #1f1f1f;  
-    --text-color:  #ebebeb;  
-    --title-background-color:  #111111;  
-    --title-text-color:  #ebebeb;  
-    --widget-color:  #424242;  
-    --hover-color:  #4f4f4f;  
-    --focus-color:  #595959;  
-    --font-size:  11px;  
-    --font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;  
-    --padding:  4px;  
-    --spacing:  4px;  
-    --widget-height:  20px;  
-    --title-height:  calc(var(--widget-height) + var(--spacing) * 1.25);  
-    --widget-border-radius:  2px;  
-    --checkbox-size:  calc(0.75 * var(--widget-height));  
-    --scrollbar-width:  5px; 
-    --background-color:   #1f1f1f;  
-    --text-color:   #ebebeb;  
-    --title-background-color:   #111111;  
-    --title-text-color:   #ebebeb;  
-    --widget-color:   #424242;  
-    --hover-color:   #4f4f4f;  
-    --focus-color:   #595959;  
-    --font-size:   11px;  
-    --font-family:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;  
-    --padding:   4px;  
-    --spacing:   4px;  
-    --widget-height:   20px;  
-    --title-height:   calc(var(--widget-height) + var(--spacing) * 1.25);  
-    --widget-border-radius:   2px;  
-    --checkbox-size:   calc(0.75 * var(--widget-height));  
-    --scrollbar-width:   5px; 
-    --font-size:  9pt;  
-    --background-color:  #000000;  
-    --text-color:  #ababab;  
-    --title-background-color:  #0d0d0d;  
-    --title-text-color:  #d9d9d9;  
-    --widget-color:  #0d0d0d;  
-    --hover-color:  #212121;  
-    --focus-color:  #292929;  
-    --number-color:  var(--rose);  
-    --string-color:  var(--spring-green);  
-    --background-color:   #000000;  
-    --text-color:   #ababab;  
-    --title-background-color:   #0d0d0d;  
-    --title-text-color:   #d9d9d9;  
-    --widget-color:   #0d0d0d;  
-    --hover-color:   #212121;  
-    --focus-color:   #292929;  
-    --number-color:   var(--rose);  
-    --string-color:   var(--spring-green);  
-    --font-size:   9pt;  
-    --font-family:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;  
-    --padding:    4px;  
-    --spacing:    4px;  
-    --widget-height:    20px;  
-    --title-height:    calc(var(--widget-height) + var(--spacing) * 1.25);  
-    --widget-border-radius:    2px;  
-    --checkbox-size:    calc(0.75 * var(--widget-height));  
-    --scrollbar-width:    5px; 
-    --padding:  .3rem;  
-    --widget-height:  2rem;  
-    --spacing:  .3rem; 
-    --font-size:  1.5rem;  
-} 
+@font-face {
+    font-family: "lil-gui";
+    src: url("data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUsAAsAAAAACJwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAAH4AAADAImwmYE9TLzIAAAGIAAAAPwAAAGBKqH5SY21hcAAAAcgAAAD0AAACrukyyJBnbHlmAAACvAAAAF8AAACEIZpWH2hlYWQAAAMcAAAAJwAAADZfcj2zaGhlYQAAA0QAAAAYAAAAJAC5AHhobXR4AAADXAAAABAAAABMAZAAAGxvY2EAAANsAAAAFAAAACgCEgIybWF4cAAAA4AAAAAeAAAAIAEfABJuYW1lAAADoAAAASIAAAIK9SUU/XBvc3QAAATEAAAAZgAAAJCTcMc2eJxVjbEOgjAURU+hFRBK1dGRL+ALnAiToyMLEzFpnPz/eAshwSa97517c/MwwJmeB9kwPl+0cf5+uGPZXsqPu4nvZabcSZldZ6kfyWnomFY/eScKqZNWupKJO6kXN3K9uCVoL7iInPr1X5baXs3tjuMqCtzEuagm/AAlzQgPAAB4nGNgYRBlnMDAysDAYM/gBiT5oLQBAwuDJAMDEwMrMwNWEJDmmsJwgCFeXZghBcjlZMgFCzOiKOIFAB71Bb8AeJy1kjFuwkAQRZ+DwRAwBtNQRUGKQ8OdKCAWUhAgKLhIuAsVSpWz5Bbkj3dEgYiUIszqWdpZe+Z7/wB1oCYmIoboiwiLT2WjKl/jscrHfGg/pKdMkyklC5Zs2LEfHYpjcRoPzme9MWWmk3dWbK9ObkWkikOetJ554fWyoEsmdSlt+uR0pCJR34b6t/TVg1SY3sYvdf8vuiKrpyaDXDISiegp17p7579Gp3p++y7HPAiY9pmTibljrr85qSidtlg4+l25GLCaS8e6rRxNBmsnERunKbaOObRz7N72ju5vdAjYpBXHgJylOAVsMseDAPEP8LYoUHicY2BiAAEfhiAGJgZWBgZ7RnFRdnVJELCQlBSRlATJMoLV2DK4glSYs6ubq5vbKrJLSbGrgEmovDuDJVhe3VzcXFwNLCOILB/C4IuQ1xTn5FPilBTj5FPmBAB4WwoqAHicY2BkYGAA4sk1sR/j+W2+MnAzpDBgAyEMQUCSg4EJxAEAwUgFHgB4nGNgZGBgSGFggJMhDIwMqEAYAByHATJ4nGNgAIIUNEwmAABl3AGReJxjYAACIQYlBiMGJ3wQAEcQBEV4nGNgZGBgEGZgY2BiAAEQyQWEDAz/wXwGAAsPATIAAHicXdBNSsNAHAXwl35iA0UQXYnMShfS9GPZA7T7LgIu03SSpkwzYTIt1BN4Ak/gKTyAeCxfw39jZkjymzcvAwmAW/wgwHUEGDb36+jQQ3GXGot79L24jxCP4gHzF/EIr4jEIe7wxhOC3g2TMYy4Q7+Lu/SHuEd/ivt4wJd4wPxbPEKMX3GI5+DJFGaSn4qNzk8mcbKSR6xdXdhSzaOZJGtdapd4vVPbi6rP+cL7TGXOHtXKll4bY1Xl7EGnPtp7Xy2n00zyKLVHfkHBa4IcJ2oD3cgggWvt/V/FbDrUlEUJhTn/0azVWbNTNr0Ens8de1tceK9xZmfB1CPjOmPH4kitmvOubcNpmVTN3oFJyjzCvnmrwhJTzqzVj9jiSX911FjeAAB4nG3HMRKCMBBA0f0giiKi4DU8k0V2GWbIZDOh4PoWWvq6J5V8If9NVNQcaDhyouXMhY4rPTcG7jwYmXhKq8Wz+p762aNaeYXom2n3m2dLTVgsrCgFJ7OTmIkYbwIbC6vIB7WmFfAAAA==") format("woff");
+}
 
-*  { 
-    scrollbar-width: auto; 
-    scrollbar-color: #ffffff80 #00000000;
-} 
+@font-face {
+    font-display: block;
+    font-family: bootstrap-icons;
+    src: url(/assets/fonts/bootstrap-icons-cfe45b98.woff2-1fa40e8900654d2863d011707b9fb6f2) format("woff2"), url(/assets/fonts/bootstrap-icons-999550fa.woff-1fa40e8900654d2863d011707b9fb6f2) format("woff");
+}
 
-
-
-:root { 
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
-    --spring-green: #3dff71ff; 
-    --rose: #ff297eff; 
-    --margin: 18px;
-} 
-
-#top_tool_strip { 
-    display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap;
-} 
-
-.lil-gui { 
-    font-family:   var(--font-family); 
-    font-size:   var(--font-size); 
-    line-height:   1; 
-    font-weight:   normal; 
-    font-style:   normal; 
-    text-align:   left; 
-    background-color:   var(--background-color); 
-    color:   var(--text-color); 
-    user-select:   none; 
-    -webkit-user-select:   none; 
-    touch-action:   manipulation; 
-    --background-color:  #000000; 
-    --text-color:  #ababab; 
-    --title-background-color:  #0d0d0d; 
-    --title-text-color:  #d9d9d9; 
-    --widget-color:  #0d0d0d; 
-    --hover-color:  #212121; 
-    --focus-color:  #292929; 
-    --number-color:  var(--rose); 
-    --string-color:  var(--spring-green); 
-    --font-size:  9pt; 
-    --font-family:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
-    --padding:   4px; 
-    --spacing:   4px; 
-    --widget-height:   20px; 
-    --title-height:   calc(var(--widget-height) + var(--spacing) * 1.25); 
-    --widget-border-radius:   2px; 
-    --checkbox-size:   calc(0.75 * var(--widget-height)); 
-    --scrollbar-width:   5px;
-    box-sizing:  border-box; 
-    margin:  0; 
-    padding:  0;
-    border-radius: 4pt;
-} 
-
-.toolsGUI { 
-    display: flex; 
-    --padding: .3rem; 
-    --widget-height: 2rem; 
+.lil-gui {
+    /* CSS Variables that may have been missed get put on body */
+    --background-color: #1f1f1f;
+    --text-color: #ebebeb;
+    --title-background-color: #111111;
+    --title-text-color: #ebebeb;
+    --widget-color: #424242;
+    --hover-color: #4f4f4f;
+    --focus-color: #595959;
+    --font-size: 11px;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --padding: 4px;
+    --spacing: 4px;
+    --widget-height: 20px;
+    --title-height: calc(var(--widget-height) + var(--spacing) * 1.25);
+    --widget-border-radius: 2px;
+    --checkbox-size: calc(0.75 * var(--widget-height));
+    --scrollbar-width: 5px;
+    --background-color: #1f1f1f;
+    --text-color: #ebebeb;
+    --title-background-color: #111111;
+    --title-text-color: #ebebeb;
+    --widget-color: #424242;
+    --hover-color: #4f4f4f;
+    --focus-color: #595959;
+    --font-size: 11px;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --padding: 4px;
+    --spacing: 4px;
+    --widget-height: 20px;
+    --title-height: calc(var(--widget-height) + var(--spacing) * 1.25);
+    --widget-border-radius: 2px;
+    --checkbox-size: calc(0.75 * var(--widget-height));
+    --scrollbar-width: 5px;
+    --font-size: 9pt;
+    --background-color: #000000;
+    --text-color: #ababab;
+    --title-background-color: #0d0d0d;
+    --title-text-color: #d9d9d9;
+    --widget-color: #0d0d0d;
+    --hover-color: #212121;
+    --focus-color: #292929;
+    --number-color: var(--rose);
+    --string-color: var(--spring-green);
+    --background-color: #000000;
+    --text-color: #ababab;
+    --title-background-color: #0d0d0d;
+    --title-text-color: #d9d9d9;
+    --widget-color: #0d0d0d;
+    --hover-color: #212121;
+    --focus-color: #292929;
+    --number-color: var(--rose);
+    --string-color: var(--spring-green);
+    --font-size: 9pt;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --padding: 4px;
+    --spacing: 4px;
+    --widget-height: 20px;
+    --title-height: calc(var(--widget-height) + var(--spacing) * 1.25);
+    --widget-border-radius: 2px;
+    --checkbox-size: calc(0.75 * var(--widget-height));
+    --scrollbar-width: 5px;
+    --padding: .3rem;
+    --widget-height: 2rem;
     --spacing: .3rem;
-} 
+    --font-size: 1.5rem;
+}
 
-.lil-gui.root { 
-    width: var(--width, 245px); 
-    display: flex; 
-    flex-direction: column;
-} 
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff80 #00000000;
+}
 
-.toolsGUI.horizontal { 
-    width: fit-content; 
-    min-height: 2.6rem; 
-    height: fit-content;
-} 
 
-#top_tool_strip #top_tool_strip > *  { 
-    flex-shrink: 0; 
-    margin-left: var(--margin); 
-    margin-top: var(--margin); 
-    display: flex; 
-    pointer-events: all;
-} 
 
-.lil-gui *  { 
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0;
-} 
+:root {
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --spring-green: #3dff71ff;
+    --rose: #ff297eff;
+    --margin: 18px;
+}
 
-.title { 
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-} 
-
-.lil-gui .title  { 
-    height: var(--title-height); 
-    line-height: calc(var(--title-height) - 4px); 
-    font-weight: 600; 
-    padding: 0 var(--padding); 
-    -webkit-tap-highlight-color: transparent; 
-    cursor: pointer; 
-    outline: none; 
-    text-decoration-skip: objects;
-} 
-
-.lil-gui > .title  { 
-    border-radius: 4pt;
-} 
-
-.toolsGUI .title  { 
-    display: none;
-} 
-
-.lil-gui.root > .title  { 
-    background: var(--title-background-color); 
-    color: var(--title-text-color);
-} 
-
-.lil-gui .title:before  { 
-    font-family: "lil-gui"; 
-    content: "▾"; 
-    padding-right: 2px; 
-    display: inline-block;
-} 
-
-@media (hover: hover){ 
-  body:not(.lil-gui-dragging) .lil-gui .title:hover  { 
-    background: var(--title-background-color); 
-    opacity: 0.85;
-  } 
-}     
-
-.toolsGUI .children  { 
-    display: flex; 
-    flex-wrap: wrap;
-} 
-
-.lil-gui.root > .children  { 
-    overflow-x: hidden; 
-    overflow-y: auto;
-} 
-
-.toolsGUI.horizontal .children  { 
-    display: flex; 
+#top_tool_strip {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 10;
+    display: flex;
     flex-direction: row;
-} 
+    flex-wrap: wrap;
+}
 
-.lil-gui.root > .children::-webkit-scrollbar { 
-    width: var(--scrollbar-width); 
-    height: var(--scrollbar-width); 
-    background: var(--background-color);
-} 
-
-.lil-gui.root > .children::-webkit-scrollbar-thumb { 
-    border-radius: var(--scrollbar-width); 
-    background: var(--focus-color);
-} 
-
-.lil-gui .controller  { 
-    display: flex; 
-    align-items: center; 
-    padding: 0 var(--padding); 
-    margin: var(--spacing) 0;
-} 
-
-.toolsGUI .children .controller  { 
-    min-width: 2.6rem; 
-    min-height: 2.6rem; 
-    --font-size: 1.5rem; 
+.lil-gui {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    --background-color: #000000;
+    --text-color: #ababab;
+    --title-background-color: #0d0d0d;
+    --title-text-color: #d9d9d9;
+    --widget-color: #0d0d0d;
+    --hover-color: #212121;
+    --focus-color: #292929;
+    --number-color: var(--rose);
+    --string-color: var(--spring-green);
+    --font-size: 9pt;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --padding: 4px;
+    --spacing: 4px;
+    --widget-height: 20px;
+    --title-height: calc(var(--widget-height) + var(--spacing) * 1.25);
+    --widget-border-radius: 2px;
+    --checkbox-size: calc(0.75 * var(--widget-height));
+    --scrollbar-width: 5px;
+    box-sizing: border-box;
     margin: 0;
-} 
+    padding: 0;
+    border-radius: 4pt;
+}
 
-.lil-gui .controller .widget  { 
-    position: relative; 
-    display: flex; 
-    align-items: center; 
-    width: 100%; 
+.toolsGUI {
+    display: flex;
+    --padding: .3rem;
+    --widget-height: 2rem;
+    --spacing: .3rem;
+}
+
+.lil-gui.root {
+    width: var(--width, 245px);
+    display: flex;
+    flex-direction: column;
+}
+
+.toolsGUI.horizontal {
+    width: fit-content;
+    min-height: 2.6rem;
+    height: fit-content;
+}
+
+#top_tool_strip #top_tool_strip>* {
+    flex-shrink: 0;
+    margin-left: var(--margin);
+    margin-top: var(--margin);
+    display: flex;
+    pointer-events: all;
+}
+
+.lil-gui * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lil-gui .title {
+    height: var(--title-height);
+    line-height: calc(var(--title-height) - 4px);
+    font-weight: 600;
+    padding: 0 var(--padding);
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    outline: none;
+    text-decoration-skip: objects;
+}
+
+.lil-gui>.title {
+    border-radius: 4pt;
+}
+
+.toolsGUI .title {
+    display: none;
+}
+
+.lil-gui.root>.title {
+    background: var(--title-background-color);
+    color: var(--title-text-color);
+}
+
+.lil-gui .title:before {
+    font-family: "lil-gui";
+    content: "▾";
+    padding-right: 2px;
+    display: inline-block;
+}
+
+@media (hover: hover) {
+    body:not(.lil-gui-dragging) .lil-gui .title:hover {
+        background: var(--title-background-color);
+        opacity: 0.85;
+    }
+}
+
+.toolsGUI .children {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lil-gui.root>.children {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.toolsGUI.horizontal .children {
+    display: flex;
+    flex-direction: row;
+}
+
+.lil-gui.root>.children::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+    background: var(--background-color);
+}
+
+.lil-gui.root>.children::-webkit-scrollbar-thumb {
+    border-radius: var(--scrollbar-width);
+    background: var(--focus-color);
+}
+
+.lil-gui .controller {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--padding);
+    margin: var(--spacing) 0;
+}
+
+.toolsGUI .children .controller {
+    min-width: 2.6rem;
+    min-height: 2.6rem;
+    --font-size: 1.5rem;
+    margin: 0;
+}
+
+.lil-gui .controller .widget {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
     min-height: var(--widget-height);
-} 
+}
 
-.lil-gui button  { 
-    -webkit-tap-highlight-color: transparent; 
-    outline: none; 
-    cursor: pointer; 
-    font-family: var(--font-family); 
-    font-size: var(--font-size); 
-    color: var(--text-color); 
-    width: 100%; 
-    height: var(--widget-height); 
-    text-transform: none; 
-    background: var(--widget-color); 
-    border-radius: var(--widget-border-radius); 
-    border: 1px solid var(--widget-color); 
-    text-align: center; 
+.lil-gui button {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    width: 100%;
+    height: var(--widget-height);
+    text-transform: none;
+    background: var(--widget-color);
+    border-radius: var(--widget-border-radius);
+    border: 1px solid var(--widget-color);
+    text-align: center;
     line-height: calc(var(--widget-height) - 4px);
-} 
+}
 
-@media (hover: hover){ 
-  .lil-gui button:hover  { 
-    background: var(--hover-color); 
-    border-color: var(--hover-color);
-  } 
-}     
+@media (hover: hover) {
+    .lil-gui button:hover {
+        background: var(--hover-color);
+        border-color: var(--hover-color);
+    }
+}
 
-.toolsGUI .children .controller .name  { 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
+.toolsGUI .children .controller .name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-} 
+}
 
-.toolsGUI .children .controller span  { 
-    font-weight: 700; 
-    font-size: .5em; 
-    margin-left: 8px; 
+.toolsGUI .children .controller span {
+    font-weight: 700;
+    font-size: .5em;
+    margin-left: 8px;
     margin-right: 8px;
-} 
+}
 
-.bi:before,[class^="bi-"]:before,[class*=" bi-"]:before  { 
-    display: inline-block; 
-    font-family: bootstrap-icons!important; 
-    font-style: normal; 
-    font-weight: 400!important; 
-    font-variant: normal; 
-    text-transform: none; 
-    line-height: 1; 
-    vertical-align: -.125em; 
-    -webkit-font-smoothing: antialiased; 
+.bi:before,
+[class^="bi-"]:before,
+[class*=" bi-"]:before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-} 
+}
 
-.bi-folder2-open:before { 
+.bi-folder2-open:before {
     content: "\f3d8";
-} 
+}
 
-.bi-save:before { 
+.bi-save:before {
     content: "\f525";
-} 
+}
 
-.bi-file-earmark-fill:before { 
+.bi-file-earmark-fill:before {
     content: "\f369";
-} 
+}
 
-.bi-arrow-counterclockwise:before { 
+.bi-arrow-counterclockwise:before {
     content: "\f117";
-} 
+}
 
-.bi-arrow-clockwise:before { 
+.bi-arrow-clockwise:before {
     content: "\f116";
-} 
+}
 
-.bi-file-earmark-code-fill:before { 
+.bi-file-earmark-code-fill:before {
     content: "\f361";
-} 
+}
 
-.bi.secondary { 
-    position: absolute; 
-    font-size: .6em; 
-    left: 1.1em; 
-    top: .6em; 
-    text-shadow: -1px -1px 0 #000,0 -1px 0 #000,1px -1px 0 #000,1px 0 0 #000,1px 1px 0 #000,0 1px 0 #000,-1px 1px 0 #000,-1px 0 0 #000;
-} 
+.bi.secondary {
+    position: absolute;
+    font-size: .6em;
+    left: 1.1em;
+    top: .6em;
+    text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+}
 
-.bi-plus-circle-fill:before { 
+.bi-plus-circle-fill:before {
     content: "\f4f9";
-} 
+}
 
 
 /* These were inline style tags. Uses id+class to override almost everything */
-#style-pecUI.style-pecUI {  
-   color: inherit;  
-}  
-#style-lAPJ8.style-lAPJ8 {  
-   color: inherit;  
-}  
-#style-DoN9o.style-DoN9o {  
-   color: inherit;  
-}  
-#style-9EFsr.style-9EFsr {  
-   color: inherit;  
-}  
-#style-fDJwa.style-fDJwa {  
-   color: inherit;  
-}  
-#style-MJ79p.style-MJ79p {  
-   color: var(--spring-green);  
-}  
+#style-pecUI.style-pecUI {
+    color: inherit;
+}
+
+#style-lAPJ8.style-lAPJ8 {
+    color: inherit;
+}
+
+#style-DoN9o.style-DoN9o {
+    color: inherit;
+}
+
+#style-9EFsr.style-9EFsr {
+    color: inherit;
+}
+
+#style-fDJwa.style-fDJwa {
+    color: inherit;
+}
+
+#style-MJ79p.style-MJ79p {
+    color: var(--spring-green);
+}
