@@ -4,17 +4,41 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button>
+          <div class="navicon"></div>
+        </button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+          {% else %}
+          {% assign domain = base_path %}
+          {% endif %}
+          <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
+          <li class="masthead__menu-item">
+            <div id="top_tool_strip" class="snipcss-efl2p"
+              onclick="window.open('https://eszesbalint.github.io/bdstudio/editor', '_blank');">
+              <div
+                class="lil-gui allow-touch-styles root toolsGUI horizontal tether-target-attached-top tether-element-attached-top tether-element-attached-center tether-target-attached-center">
+                <div class="title" role="button" aria-expanded="true" tabindex="0"></div>
+                <div class="children">
+                  <div
+                    class="controller function snipcss0-0-0-1 tether-target-attached-top tether-element-attached-top tether-element-attached-center tether-target-attached-center"
+                    title="Try BDStudio">
+                    <div class="widget snipcss0-1-1-2"><button class="snipcss0-2-2-3">
+                        <div class="name snipcss0-3-3-4" id="lil-gui-name-8">
+                          <img src="{{ base_path }}/images/logo_28x28.png" width="28" height="28"
+                            class="snipcss0-4-4-5">
+                          <span class="snipcss0-4-4-6">Try BDStudio</span>
+                        </div>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>

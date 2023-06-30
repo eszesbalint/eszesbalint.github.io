@@ -42,22 +42,5 @@
         {% endif %}
       </li>
     {% endfor %}
-    <li>
-      <div id="top_tool_strip" class="snipcss-efl2p" onclick="window.open('https://eszesbalint.github.io/bdstudio/editor', '_blank');">
-        <div class="lil-gui allow-touch-styles root toolsGUI horizontal tether-target-attached-top tether-element-attached-top tether-element-attached-center tether-target-attached-center">
-            <div class="title" role="button" aria-expanded="true" tabindex="0"></div>
-            <div class="children">
-                <div class="controller function snipcss0-0-0-1 tether-target-attached-top tether-element-attached-top tether-element-attached-center tether-target-attached-center" title="Try BDStudio">
-                    <div class="widget snipcss0-1-1-2"><button class="snipcss0-2-2-3">
-                            <div class="name snipcss0-3-3-4" id="lil-gui-name-8">
-                                <img src="{{ base_path }}/images/logo_28x28.png" width="28" height="28" class="snipcss0-4-4-5">
-                                <span class="snipcss0-4-4-6">Try BDStudio</span>
-                            </div>
-                        </button></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </li>
   </ul>
 </nav>
