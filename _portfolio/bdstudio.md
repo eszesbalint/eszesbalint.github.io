@@ -1,6 +1,10 @@
 ---
 title: "BDStudio"
-excerpt: "A 3D editor and command generator for Minecraft block display entities<br/><img src='/assets/img/bg.png'>"
+excerpt: "It enables users to bring custom 3D models into their Minecraft
+worlds without the use of mods or resource packs. With this tool,
+users have complete creative control over an otherwise rigid, blocky
+world. It has a user friendly UI, and all the necessary 3D modelling
+and editing tools to create anything they could envision."
 collection: portfolio
 ---
 

@@ -1,8 +1,17 @@
 # main links links
-main: 
+main:
+  - title: "CV"
+    url: "/files/Eszes Bálint CV EN másolata-13.pdf"
+
   - title: "Portfolio"
     url: /portfolio/
         
   - title: "Blog Posts"
     url: /year-archive/
-    
+
+  - title: "BDStudio"
+    url: /bdstudio/
+
+  - title: "Privacy Policy"
+    url: /terms/
+  

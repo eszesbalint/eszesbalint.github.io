@@ -1,0 +1,46 @@
+---
+layout: splash
+permalink: /bdstudio/
+title: "BDStudio"
+excerpt: "This is a page not in th emain menu"
+author_profile: false
+
+
+---
+<style>
+</style>
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; height: calc(100vh - 200px); width: 100%;border-radius: 16px; align-items: center;">
+  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column ;">
+    <div style="max-width: 512px; margin: 32px">
+      <h1>Block Display Studio</h1>
+      <p>
+        <b>BDStudio is a 3D editor and command generator for Minecraft's display entities.</b>
+        It enables you to bring custom 3D models into your Minecraft
+worlds without the use of mods or resource packs. With this tool,
+you have complete creative control over an otherwise rigid, blocky
+world. It has a user friendly UI, and all the necessary 3D modelling
+and editing tools to create anything you could envision.
+      </p>
+      {% include try_bdstudio.html %}
+    </div>
+  </div>
+  <div style=" flex-grow: 2; background-image: url(/images/Screenshot_20230629_171332.png); background-size: contain; background-position: center; background-repeat: no-repeat; border-radius: 16px; height: 512px;  min-width: 256px; margin: 32px;">
+  </div>
+</div>
+<div style="padding: 32px;">
+  <h2>Videos showcasing BDStudio</h2>
+  <div style="display: flex; flex-wrap: wrap; width: 100%;">
+    <a href="https://www.youtube.com/watch?v=aYi5wnCOXm4" style="max-width: 50%; padding: 4px;"><img src="https://i.ytimg.com/vi/aYi5wnCOXm4/maxresdefault.jpg"></a>
+    <a href="https://www.youtube.com/watch?v=n3Z11rnPPRc" style="max-width: 50%; padding: 4px;"><img src="https://i.ytimg.com/vi/n3Z11rnPPRc/maxresdefault.jpg"></a>
+    
+  </div>
+  <h2>Release notes</h2>
+{% include base_path %}
+{% include group-by-array collection=site.posts field="tags" %}
+{% assign relevant_tags = "bdstudio, update" | split: ", " %}
+{% for post in site.posts %}
+  {% if post.tags contains relevant_tags[0] and post.tags contains relevant_tags[1]  %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+</div>
