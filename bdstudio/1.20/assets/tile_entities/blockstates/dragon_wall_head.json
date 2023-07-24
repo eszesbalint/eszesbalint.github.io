@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tile_entities:block/dragon_wall_head",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tile_entities:block/dragon_wall_head"
+    },
+    "facing=south": {
+      "model": "tile_entities:block/dragon_wall_head",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tile_entities:block/dragon_wall_head",
+      "y": 270
+    }
+  }
+}
