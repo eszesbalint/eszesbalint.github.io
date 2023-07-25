@@ -1,6 +1,0 @@
-{
-  "parent": "tile_entities:block/hanging_sign_template",
-  "textures": {
-    "0": "tile_entities:entity/signs/hanging/oak"
-  }
-}

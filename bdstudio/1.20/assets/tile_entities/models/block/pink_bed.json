@@ -1,6 +1,0 @@
-{
-  "parent": "tile_entities:block/bed_template",
-  "textures": {
-    "1": "tile_entities:entity/bed/pink"
-  }
-}
