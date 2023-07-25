@@ -1,6 +1,0 @@
-{
-  "parent": "tile_entities:block/head_template",
-  "textures": {
-    "0": "tile_entities:entity/creeper/creeper"
-  }
-}

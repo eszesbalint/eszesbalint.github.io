@@ -1,6 +1,0 @@
-{
-  "parent": "tile_entities:block/sign_template",
-  "textures": {
-    "0": "tile_entities:entity/signs/birch"
-  }
-}
