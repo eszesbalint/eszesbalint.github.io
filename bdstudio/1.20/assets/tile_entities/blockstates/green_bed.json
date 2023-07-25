@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tile_entities:block/green_bed",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tile_entities:block/green_bed"
+    },
+    "facing=south": {
+      "model": "tile_entities:block/green_bed",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tile_entities:block/green_bed",
+      "y": 270
+    }
+  }
+}
