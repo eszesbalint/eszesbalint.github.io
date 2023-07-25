@@ -1,0 +1,6 @@
+{
+  "parent": "tile_entities:block/chest_template",
+  "textures": {
+    "1": "tile_entities:entity/chest/trapped"
+  }
+}
